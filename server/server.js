@@ -11,6 +11,11 @@ app.use(cors());
 // Point static path to dist
 app.use(express.static(path.join(__dirname, 'dist')));
 
+app.get('*', (req, res) => {
+   res.send("it's working");
+   //res.sendFile(path.join(__dirname, 'dist/index.html'));
+});
+
 app.get('/', function (req, res){
     res.sendFile(path.join(__dirname+'/html/index.html'));
 });
