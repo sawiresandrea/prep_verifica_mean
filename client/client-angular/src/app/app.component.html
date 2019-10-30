@@ -1,4 +1,6 @@
 <div style="text-align:center">
   <h1>Il super negozio di super prodotti</h1>
-  <p>{{results}}</p>
+  <div ngFor="let product of results">
+    <p>{{product.product_name}}</p>
+  </div>
 </div>
